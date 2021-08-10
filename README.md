@@ -1,2 +1,2 @@
 # plasmoctopus
-Modified Octopus source files for quantum plasmonics calculationss
+Modified Octopus source files for quantum plasmonics calculations.
