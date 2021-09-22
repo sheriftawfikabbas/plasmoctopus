@@ -1,0 +1,59 @@
+CalculationMode = gs
+UnitsOutput = eV_Angstrom
+Dimensions = 3
+FromScratch = yes
+BoxShape = minimum
+Radius = 8.0*angstrom
+Spacing = 0.5*angstrom
+PeriodicDimensions = 0
+ExperimentalFeatures = yes
+MaximumIter = 10000
+MixNumberSteps = 6
+Mixing = 0.05
+MixingScheme = broyden
+ConvRelDens  = 1.0E-7
+#ConvRelEv = 1e-7
+XCFunctional = lda_x + lda_c_pz_mod
+ExtraStates = 0
+ExcessCharge=0.0
+TDEnergyUpdateIter = 10
+StickyBoundaries = false
+ABWidth = 0.2116708996
+AbsorbingBoundaries = mask
+#Optics stuff
+TDDeltaStrength = 0.05
+TDPolarizationDirection = 3
+PropagationSpectrumMaxEnergy = 20.0
+PropagationSpectrumEnergyStep = 0.001
+
+
+LCAOStart = lcao_full
+SmearingFunction = semiconducting
+Smearing = 0.1
+
+#%Species
+#"Na"	|	 species_pseudo 	|	 file 	|	 "Na.psf"
+#%
+
+%Coordinates
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-24.565*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-21.675*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-18.785*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-15.895000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-13.005*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-10.115*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-7.225000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-4.335000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-1.4450000000000003*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	1.4450000000000003*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	4.335000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	7.225000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	10.114999999999998*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	13.004999999999999*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	15.895*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	18.785*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	21.675*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	24.565*angstrom	|	yes
+
+%
+

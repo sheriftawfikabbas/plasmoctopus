@@ -1,0 +1,79 @@
+CalculationMode = td
+UnitsOutput = eV_Angstrom
+Dimensions = 3
+FromScratch = yes
+BoxShape = minimum
+Radius = 8.0*angstrom
+Spacing = 0.5*angstrom
+PeriodicDimensions = 0
+ExperimentalFeatures = yes
+MaximumIter = 10000
+MixNumberSteps = 6
+Mixing = 0.25
+MixingScheme = broyden
+ConvRelDens  = 1.0E-7
+#ConvRelEv = 1e-7
+XCFunctional = lda_x + lda_c_pz_mod
+ExtraStates = 0
+ExcessCharge=0.0
+TDEnergyUpdateIter = 10
+StickyBoundaries = false
+ABWidth = 0.2116708996
+AbsorbingBoundaries = mask
+#Optics stuff
+TDDeltaStrength = 0.05/angstrom
+TDPolarizationDirection = 3
+PropagationSpectrumMaxEnergy = 20.0*eV
+PropagationSpectrumEnergyStep = 0.001*eV
+
+
+LCAOStart = lcao_full
+SmearingFunction = semiconducting
+Smearing = 0.1
+
+
+%Coordinates
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-24.565*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-21.675*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-18.785*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-15.895000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-13.005*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-10.115*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-7.225000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-4.335000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	-1.4450000000000003*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	1.4450000000000003*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	4.335000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	7.225000000000001*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	10.114999999999998*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	13.004999999999999*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	15.895*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	18.785*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	21.675*angstrom	|	yes
+"Na"	|	0.0*angstrom	|	0.0*angstrom	|	24.565*angstrom	|	yes
+
+%
+
+#TFFDT
+TDPropagator = etrs
+TDMaxSteps = 10000.0
+TDTimeStep = 0.005/eV
+TDOutput = laser + multipoles + geometry + energy + eigenvalues + local_mag_moments + spin + angular + temperature
+Output = geometry + forces
+OutputFormat = xyz 
+TDDynamics = ehrenfest
+MoveIons = false
+TDStepsWithSelfConsistency = 3
+
+PlasmonicsSigma = 0.07*eV
+%PlasmonicsOmegas 
+	0.657*eV
+	1.548*eV
+	3.1*eV
+        3.52*eV
+%
+FieldEmission = false
+ChargeAboveZ = 0.0
+StickyBoundaries = false
+TDSelfInducedMagneticField = false
+WriteCurrentDensity = false
